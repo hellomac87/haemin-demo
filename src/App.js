@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Provider } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from './components/common/Header';
 import Carousel from './components/main/Carousel';
 import Categories from './components/main/Categories';
@@ -21,14 +22,43 @@ class App extends Component {
   render() {
     const {user} = this.state;
     return (
-      <div className="App">
-        <Header user={user} />
-        <Carousel/>
-        <Categories/>
-        <SeachBestStore/>
-      </div>
+      <Router>
+        <div className="App">
+          <Header user={user} />
+          <Route path="/" exact component={Main} />
+          <Route path="/stores" component={Stores} />
+        </div>
+      </Router>
     );
   }
+}
+
+const Main = () => {
+  return(
+    <div>
+      <Carousel />
+      <Categories />
+      <SeachBestStore />
+    </div>
+    
+  )
+}
+
+const Stores = () => {
+  return(
+    <div>
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+      상점페이지상점페이지상점페이지상점페이지
+    </div>
+  )
 }
 
 export default App;

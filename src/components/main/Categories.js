@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import classNames from 'classnames';
 import './Categories.scss';
 
@@ -17,10 +18,14 @@ class Categories extends Component {
                     lists.map((list, index) => {
                         return (
                             <li key={index} className={classNames('category-item')}>
-                                <span className={classNames('category-item-name')}>{list}</span>
+                                <span className={classNames('category-item-name')}>
+                                    <Link to="/stores">
+                                        {list}
+                                    </Link>
+                                </span>
                             </li>
                         )
-                })
+                    })
                 }
             </ul>
         );
