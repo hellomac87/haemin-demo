@@ -8,10 +8,17 @@
         width:33.333%;
         height: 150px;
         padding: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
         border:1px dotted rgba(0,0,0,0.1);
         font-size:1.5rem;
+        .category-item-name{
+            width:100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+        }
+        
     }
 }

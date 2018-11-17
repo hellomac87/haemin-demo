@@ -1,0 +1,28 @@
+.stores-header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: #fff;
+    color:#000;
+    .stores-header-info{
+        width:100%;
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .stores-header-tab{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0,0,0,0.1);
+        li{
+            width:13.333%;
+            text-align: center;
+            padding: 5px 0;
+        }
+    }
+}
