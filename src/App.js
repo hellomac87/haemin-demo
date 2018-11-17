@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/common/Header';
+import Carousel from './components/main/Carousel';
+import Categories from './components/main/Categories';
+import SeachBestStore from './components/main/SeachBestStore'
+
+import './App.scss';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      user : {
+        id : 1,
+        username: '이강산',
+        fullAddress: '서울시 노원구 상계동 666, 주공 10단지',
+        shortAddress: '상계동 666'
+      }
+    }
+  }
   render() {
+    const {user} = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header user={user} />
+        <Carousel/>
+        <Categories/>
+        <SeachBestStore/>
       </div>
     );
   }

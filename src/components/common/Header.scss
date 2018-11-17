@@ -1,0 +1,28 @@
+$baemin-color : #2ac1bc;
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 35px;
+    background: #fff;
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size:1.5rem;
+    }
+    .address-search-btn{
+        width:15px;
+        height: 15px;
+        margin-left: 5px;
+        border-radius: 50%;
+        border:0;
+        color:#fff;
+        font-size: 0.9rem;
+        font-weight:bold;
+        background: $baemin-color;
+    }
+}
