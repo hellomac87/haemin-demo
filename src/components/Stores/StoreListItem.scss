@@ -1,0 +1,28 @@
+.store-list-item{
+    display: flex;
+    padding: 10px;
+    .img{
+        width:70px;
+        height: 70px;
+        
+        img{
+            width:100%;
+            border-radius: 50%;
+        }
+    }
+    .info-wrap{
+        width:calc(100% - 70px);
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .info{
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 0;
+            div{
+                margin-right: 5px;
+            }
+        }
+    }
+}

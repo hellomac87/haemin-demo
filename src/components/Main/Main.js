@@ -21,9 +21,10 @@ class Main extends Component {
     }
     render() {
         const { user } = this.state;
+        const { onMenuActive } = this.props;
         return (
             <div>
-                <Header user={user} />
+                <Header user={user} onMenuActive={onMenuActive}/>
                 <Carousel />
                 <Categories />
                 <SeachBestStore />

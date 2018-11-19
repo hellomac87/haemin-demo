@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StoresHeader from './StoresHeader';
+import StoreListItem from './StoreListItem';
 import './Stores.scss';
 
 class Stores extends Component {
@@ -21,17 +22,31 @@ class Stores extends Component {
                     mainUrl: 'https://www.bloter.net/wp-content/uploads/2018/01/unnamed.png',
                     title: '가게이름',
                     description: '가게설명',
-                    likes: 100,
-                    reviews: 100
+                    star: 5,
+                    reviews: 100,
+                    ownerReply: 100,
+                    menu:['menu1','menu2']
                 },
                 {
                     id: 2,
                     mainUrl: 'https://www.bloter.net/wp-content/uploads/2018/01/unnamed.png',
                     title: '가게이름2',
                     description: '가게설명2',
-                    likes: 100,
-                    reviews: 100
-                }
+                    star: 5,
+                    reviews: 100,
+                    ownerReply: 100,
+                    menu:['menu1','menu2']
+                },
+                {
+                    id: 3,
+                    mainUrl: 'https://www.bloter.net/wp-content/uploads/2018/01/unnamed.png',
+                    title: '가게이름3',
+                    description: '가게설명3',
+                    star: 5,
+                    reviews: 100,
+                    ownerReply: 100,
+                    menu:['menu1','menu2']
+                },
             ]
         });
         // 현재 카테고리 설정을 바탕으로 현재 리스트 설정하기
@@ -44,15 +59,7 @@ class Stores extends Component {
                 <ul>
                     {
                         currentLists && currentLists.map((list,index) => {
-                            return (
-                                <li key={list.id}>
-                                    <img src={list.mainUrl} />
-                                    <div>{list.title}</div> 
-                                    <div>{list.description}</div> 
-                                    <div>{list.likes}</div> 
-                                    <div>{list.reviews}</div> 
-                                </li>
-                            )
+                            return <StoreListItem list={list} key={list.id}/>
                         })
                     }
                 </ul>
@@ -61,5 +68,7 @@ class Stores extends Component {
         );
     }
 }
+
+
 
 export default Stores;
