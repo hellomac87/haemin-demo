@@ -1,8 +1,9 @@
-import React, { Component, Fragment} from 'react';
+import React, { Component} from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import classNames from 'classnames';
 import Main from './components/Main/Main';
 import Stores from './components/Stores/Stores';
+import Cart from './components/Cart';
 
 import './App.scss';
 
@@ -27,6 +28,7 @@ class App extends Component {
         <div className="App">
           <Route path="/" exact render={() => <Main menuActive={menuActive} onMenuActive={this.handleMenuActive}/>}/>
           <Route path="/stores" component={Stores} />
+          <Route path="/cart" render={() => <Cart/>} />
           <Menu active={this.state.menuActive} onMenuActive={this.handleMenuActive}/>
         </div>
       </Router>
