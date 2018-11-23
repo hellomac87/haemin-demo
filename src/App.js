@@ -1,48 +1,29 @@
 import React, { Component} from 'react';
+import {UserProvider} from './contexts/UserContext';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import classNames from 'classnames';
 import Main from './components/Main/Main';
 import Stores from './components/Stores/Stores';
 import Cart from './components/Cart';
+import UserModal from './components/common/UserModal';
 
 import './App.scss';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      menuActive : false,
-    }
-  }
-
-  handleMenuActive = () => {
-    this.setState({
-      menuActive: !this.state.menuActive,
-    })
-  }
-
   render() {
-    const {menuActive} = this.state;
     return (
       <Router>
-        <div className="App">
-          <Route path="/" exact render={() => <Main menuActive={menuActive} onMenuActive={this.handleMenuActive}/>}/>
-          <Route path="/stores" component={Stores} />
-          <Route path="/cart" render={() => <Cart/>} />
-          <Menu active={this.state.menuActive} onMenuActive={this.handleMenuActive}/>
-        </div>
+        <UserProvider>
+          <div className="App">
+            <Route path="/" exact render={() => <Main/>} />
+            <Route path="/stores" component={Stores} />
+            {/* FIXME :: cart 컴포넌트는 url 변경을 통해 접근하는 것이 아니기 때문에 Route 방식으로 작성하지 않는다 */}
+            <Route path="/cart" render={() => <Cart />} />
+            <UserModal />
+          </div>
+        </UserProvider>
       </Router>
     );
   }
-}
-const Menu = (props) => {
-  const { active, onMenuActive} = props;
-  return(
-    <div className={classNames('menu', {'active': active})}>
-      menu
-      <button onClick={onMenuActive}>close</button>
-    </div>
-  )
 }
 
 export default App;

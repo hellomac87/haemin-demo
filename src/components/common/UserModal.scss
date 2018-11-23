@@ -1,0 +1,36 @@
+.user-modal{
+  width:100%;
+  background: #fff;
+  z-index: 10;
+  position: fixed;
+  top:0;
+  left:-100%;
+  right:0;
+  bottom:0;
+  transition: all;
+  transition-duration: 0.3s;
+  &.active{
+    left:0;
+  }
+
+  .user-modal-header{
+    padding: 15px 10px;
+    border:1px solid rgba(0,0,0,0.1);
+  }
+
+  .user-modal-point-list{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .user-modal-point-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:33.333%;
+      height: 120px;
+      border:1px solid rgba(0,0,0,0.1);
+    }
+  }
+}
