@@ -3,20 +3,22 @@ import { Link } from "react-router-dom";
 import classNames from 'classnames';
 import './Categories.scss';
 
-import hansikSvg from '../../svg/ca-hansik.svg';
-import bunsikSvg from '../../svg/ca-bunsik.svg';
-import ilsikSvg from '../../svg/ca-ilsik.svg';
-import chickenSvg from '../../svg/ca-chicken.svg';
-import pizzaSvg from '../../svg/ca-pizza.svg';
-import chineseSvg from '../../svg/ca-chinese.svg';
-import zokbalSvg from '../../svg/ca-zokbal.svg';
-import yasikSvg from '../../svg/ca-yasik.svg';
-import zzigeaSvg from '../../svg/ca-zzigea.svg';
-import dosirakSvg from '../../svg/ca-dosirak.svg';
-import desertSvg from '../../svg/ca-desert.svg';
-import fastfoodSvg from '../../svg/ca-fastfood.svg';
-import franchiseSvg from '../../svg/ca-franchise.svg';
-import matzipSvg from '../../svg/ca-matzip.svg';
+import hansikSvg from 'svg/ca-hansik.svg';
+import bunsikSvg from 'svg/ca-bunsik.svg';
+import ilsikSvg from 'svg/ca-ilsik.svg';
+import chickenSvg from 'svg/ca-chicken.svg';
+import pizzaSvg from 'svg/ca-pizza.svg';
+import chineseSvg from 'svg/ca-chinese.svg';
+import zokbalSvg from 'svg/ca-zokbal.svg';
+import yasikSvg from 'svg/ca-yasik.svg';
+import zzigeaSvg from 'svg/ca-zzigea.svg';
+import dosirakSvg from 'svg/ca-dosirak.svg';
+import desertSvg from 'svg/ca-desert.svg';
+import fastfoodSvg from 'svg/ca-fastfood.svg';
+import franchiseSvg from 'svg/ca-franchise.svg';
+import matzipSvg from 'svg/ca-matzip.svg';
+
+// FIXME :: 위와같이 img, 혹은 svg 파일을 그대로 임포트해서 사용해야 할지, 다른 방식은 없는지 고민해봐야함
 
 class Categories extends Component {
     constructor(props){

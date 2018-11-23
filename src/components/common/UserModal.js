@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {withUser} from '../../contexts/UserContext';
+import {withUser} from 'contexts/UserContext';
 import './UserModal.scss';
 import classNames from 'classnames';
 
