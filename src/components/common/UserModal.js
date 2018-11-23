@@ -3,6 +3,8 @@ import {withUser} from '../../contexts/UserContext';
 import './UserModal.scss';
 import classNames from 'classnames';
 
+const menuList = ['공지사항', '이벤트', '광고문의', '1:1 문의하기', '환경설정'];
+
 class UserModal extends Component {
     constructor(props){
         super(props);
@@ -25,7 +27,7 @@ class UserModal extends Component {
                     id: 3,
                     name: '장바구니',
                     active:false,
-                    count: null
+                    count: 2
                 },
                 {
                     id: 4,
@@ -69,9 +71,29 @@ class UserModal extends Component {
                 </div>
                 <ul className={classNames('user-modal-point-list')}>
                     {
-                        pointList.map(p => <li className={classNames('user-modal-point-item')} key={p.id}>{p.name}</li>)
+                        pointList.map(p => (
+                            <li className={classNames('user-modal-point-item')} key={p.id}>
+                                {p.name}
+                                <span className="count">{p.count}</span>
+                            </li>
+                        ))
                     }
                 </ul>
+                <div className={classNames('user-modal-banner')}>
+                    배달의 민족 안심하고 이용하세요 <br/>
+                    고객 안심 센터
+                </div>
+                <ul className={classNames('user-modal-menu')}>
+                    {
+                        menuList.map(m => (
+                            <li className={classNames('user-modal-menu-item')} key={m}>{m}</li>
+                        ))
+                    }
+                </ul>
+                <div className="call-center">
+                    배달의 민족 콜센터 <br/>
+                    1644-0000
+                </div>
             </div>
         );
     }
