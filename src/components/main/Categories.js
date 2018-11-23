@@ -3,23 +3,100 @@ import { Link } from "react-router-dom";
 import classNames from 'classnames';
 import './Categories.scss';
 
+import hansikSvg from '../../svg/ca-hansik.svg';
+import bunsikSvg from '../../svg/ca-bunsik.svg';
+import ilsikSvg from '../../svg/ca-ilsik.svg';
+import chickenSvg from '../../svg/ca-chicken.svg';
+import pizzaSvg from '../../svg/ca-pizza.svg';
+import chineseSvg from '../../svg/ca-chinese.svg';
+import zokbalSvg from '../../svg/ca-zokbal.svg';
+import yasikSvg from '../../svg/ca-yasik.svg';
+import zzigeaSvg from '../../svg/ca-zzigea.svg';
+import dosirakSvg from '../../svg/ca-dosirak.svg';
+import desertSvg from '../../svg/ca-desert.svg';
+import fastfoodSvg from '../../svg/ca-fastfood.svg';
+import franchiseSvg from '../../svg/ca-franchise.svg';
+import matzipSvg from '../../svg/ca-matzip.svg';
+
 class Categories extends Component {
     constructor(props){
         super(props);
         this.state = {
-            lists: ['한식', '분식', '돈까스·회·일식', '치킨', '피자', '중국집', '족발·보쌈', '야식', '찜·탕', '도시락', '카페·디저트','패스트푸드','프랜차이즈','맛집랭킹']
+            lists: [
+                {
+                    name: '한식',
+                    img: hansikSvg
+                },
+                {
+                    name: '분식',
+                    img: bunsikSvg
+                },
+                {
+                    name: '돈까스·회·일식',
+                    img: ilsikSvg
+                },
+                {
+                    name: '치킨',
+                    img: pizzaSvg
+                },
+                {
+                    name: '피자',
+                    img: chickenSvg
+                },
+                {
+                    name: '중국집',
+                    img: chineseSvg
+                },
+                {
+                    name: '족발·보쌈',
+                    img: zokbalSvg
+                },
+                {
+                    name: '야식',
+                    img: yasikSvg
+                },
+                {
+                    name: '찜·탕',
+                    img: zzigeaSvg
+                },
+                {
+                    name: '도시락',
+                    img: dosirakSvg
+                },
+                {
+                    name: '카페·디저트',
+                    img: desertSvg
+                },
+                {
+                    name: '패스트푸드',
+                    img: fastfoodSvg
+                },
+                {
+                    name: '프랜차이즈',
+                    img: franchiseSvg
+                },
+                {
+                    name: '맛집랭킹',
+                    img: matzipSvg
+                },
+            ]
         }
     }
     render() {
         const {lists} = this.state;
         return (
             <ul className={classNames('categories')}>
+            
                 {
                     lists.map((list, index) => {
                         return (
+                            
                             <li key={index} className={classNames('category-item')}>
-                                <Link to="/stores" className={classNames('category-item-name')}>
-                                    {list}
+                                <Link to="/stores">
+                                    <img src={list.img} alt="icon" />
+                                    <span  className={classNames('category-item-name')}>
+                                        {list.name}
+                                    </span>
                                 </Link>
                             </li>
                         )
