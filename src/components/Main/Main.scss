@@ -69,3 +69,26 @@
         }
     }
 }
+
+// notice-list
+.notice-list{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    font-size:1.3rem;
+    .notice-list-item{
+        width:100%;
+        height: 45px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 12px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        .head{
+            margin-right: 5px;
+        }
+        .body{
+            font-weight:200;
+        }
+    }
+}
