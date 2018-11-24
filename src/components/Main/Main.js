@@ -5,6 +5,7 @@ import Carousel from './Carousel';
 import Categories from './Categories';
 import SeachBestStore from './SeachBestStore'
 import NoticeList from './NoticeList'
+import BottomBanner from './BottomBanner'
 
 import './Main.scss';
 
@@ -25,6 +26,7 @@ class Main extends Component {
                 <Categories />
                 <SeachBestStore />
                 <NoticeList/>
+                <BottomBanner/>
             </div>
 
         )
