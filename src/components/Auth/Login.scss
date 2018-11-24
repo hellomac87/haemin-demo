@@ -1,0 +1,71 @@
+.login{
+    width:100%;
+    height: 100vh;
+    padding: 0 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    .login-form{
+        font-size: 1.4rem;
+        width:100%;
+        margin: 30% auto 0 auto;
+        text-align: center;
+        input{
+            width:100%;
+            height: 45px;
+            margin-bottom: 30px;
+            font-size: 1.4rem;
+            border:none;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            &:focus{
+                outline:none;
+                border-bottom: 1px solid #2ac1bc;
+            }
+        }
+        button{
+            width:100%;
+            height: 45px;
+            margin-bottom: 30px;
+            font-size: 1.4rem;
+            background: #2ac1bc;
+            color:#fff;
+        }
+        .find-user{
+            color:rgba(0,0,0,0.3);
+            text-decoration: underline;
+        }
+    }
+
+
+    // social-login
+    .social-login{
+        width:100%;
+        margin: 30% auto 0 auto;
+        text-align: center;
+        button{
+            font-size: 1.4rem;
+            width:100%;
+            height: 45px;
+            color:#fff;
+            border:0;
+            &.facebook{
+                background: #4968ad;
+                margin-bottom: 10px;
+            }
+            &.naver{
+                background: #5eca6b;
+            }
+        }
+    }
+
+    .join{
+        width:100%;
+        font-size:1.2rem;
+        margin-top: 30px;
+        text-align: center;
+        color:rgba(0,0,0,0.3);
+        a{
+            color:#000;
+            font-weight:bold;
+        }
+    }
+}
