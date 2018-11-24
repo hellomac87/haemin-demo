@@ -1,0 +1,34 @@
+.footer{
+    width:100%;
+    background: #eae8ea;
+    color:#9b999b;
+    .links{
+        width:100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            width:25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(0,0,0,0.1);
+            &:last-child{
+                border-right:0;
+            }
+        }
+    }
+
+    .corp{
+        width:100%;
+        padding: 24px 12px;
+        .head{
+            font-size: 1.4rem;
+            padding: 5px 0;
+        }
+        .body{
+            line-height: 1.3;
+        }
+    }
+}
