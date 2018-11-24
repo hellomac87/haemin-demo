@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
+import classNames from 'classnames';
 import Header from '../common/Header';
 import Carousel from './Carousel';
 import Categories from './Categories';
 import SeachBestStore from './SeachBestStore'
+import NoticeList from './NoticeList'
+
+import './Main.scss';
 
 class Main extends Component {
     constructor(props) {
@@ -15,11 +19,12 @@ class Main extends Component {
     render() {
         
         return (
-            <div>
+            <div className={classNames('main')}>
                 <Header />
                 <Carousel />
                 <Categories />
                 <SeachBestStore />
+                <NoticeList/>
             </div>
 
         )
