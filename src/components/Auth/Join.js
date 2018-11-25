@@ -22,8 +22,8 @@ class Join extends Component {
                     <h1>회원가입</h1>
                     <button className={classNames('btn-complete','complete')}>완료</button>
                 </div>
-                <form className={classNames('join-body')}>
-                    <div className="join-body-el">
+                <form className={classNames('join-form')}>
+                    <div className="join-form-el">
                         <label htmlFor="nickname">닉네임</label>
                         <input 
                         onChange={(e) => this.handleChange(e)}
@@ -32,7 +32,7 @@ class Join extends Component {
                         <span className="delete">d</span>
                         <span className="complete">c</span>
                     </div>
-                    <div className="join-body-el">
+                    <div className="join-form-el">
                         <label htmlFor="email">이메일,아이디</label>
                         <input 
                         onChange={(e) => this.handleChange(e)}
@@ -41,7 +41,7 @@ class Join extends Component {
                         <span className="delete">d</span>
                         <span className="complete">c</span>
                     </div>
-                    <div className="join-body-el">
+                    <div className="join-form-el">
                         <label htmlFor="password">비밀번호</label>
                         <input 
                         onChange={(e) => this.handleChange(e)}
