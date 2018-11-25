@@ -15,6 +15,12 @@ class Join extends Component {
     handleChange = (e) => {
         console.log(e.target.value);
     }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('handleSubmit');
+    }
+
     render() {
         return (
             <div className={classNames('join')}>
@@ -22,7 +28,9 @@ class Join extends Component {
                     <h1>회원가입</h1>
                     <button className={classNames('btn-complete','complete')}>완료</button>
                 </div>
-                <form className={classNames('join-form')}>
+                <form
+                    onSubmit={(e) => this.handleSubmit(e)} 
+                    className={classNames('join-form')}>
                     <div className="join-form-el">
                         <label htmlFor="nickname">닉네임</label>
                         <input 
